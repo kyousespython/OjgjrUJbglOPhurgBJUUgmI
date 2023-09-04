@@ -336,7 +336,7 @@ function UILibrary.Main(PrjName,HideKey)
 		NofiticationButton.Size = UDim2.new(0, 330, 0, 36)
 		NofiticationButton.AutoButtonColor = false
 		NofiticationButton.Font = Enum.Font.GothamSemibold
-		NofiticationButton.Text = "OK"
+		NofiticationButton.Text = "Confirm"
 		NofiticationButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 		NofiticationButton.TextSize = 16.000
 		NofiticationButton.TextTransparency = 1
