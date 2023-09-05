@@ -1030,7 +1030,7 @@ function UILibrary.Main(PrjName,HideKey)
 				CloseButton.Size = UDim2.new(0, 60, 0, 39)
 				CloseButton.Font = Enum.Font.GothamSemibold
 				CloseButton.Text = "Close"
-				CloseButton.TextColor3 = Color3.fromRGB(0, 124, 255)
+				CloseButton.TextColor3 = Color3.fromRGB(255, 0, 212)
 				CloseButton.TextSize = 15.000
 				CloseButton.ZIndex = 4
 
