@@ -1,2 +1,41 @@
+  setclipboard("https://discord.gg/aJJpUnwyMs")
+            
+                    if not http_request then
+                        game.StarterGui:SetCore("SendNotification", {
+                            Title = "Discord Invite"; -- the title (ofc)
+                            Text = "Your Executor does not Support this function [copied invite to clipboard]"; -- what the text says (ofc)
+                            Icon = "rbxassetid://57254792"; -- the image if u want. 
+                            Duration = 5; -- how long the notification should in secounds
+                            })
+                        return
+                    end
+             
+                    local response = http_request({
+                        Url = "http://127.0.0.1:6463/rpc?v=1",
+                        Method = "POST",
+                        Headers = {
+                            ["Content-Type"] = "application/json",
+                            Origin = "https://discord.com"
+                        },
+                        Body = game:GetService("HttpService"):JSONEncode({
+                            cmd = "INVITE_BROWSER",
+                            nonce = game:GetService("HttpService"):GenerateGUID(false),
+                            args = {code = "aJJpUnwyMs"}
+                        })
+                    })
+             
+                    if not response.StatusCode == 200 then
+                        game.StarterGui:SetCore("SendNotification", {
+                            Title = "Discord Invite"; -- the title (ofc)
+                            Text = "There was an Issue while joining Discord - ERROR CODE: 200 [copied invite to clipboard]"; -- what the text says (ofc)
+                            Icon = "rbxassetid://57254792"; -- the image if u want. 
+                            Duration = 5; -- how long the notification should in secounds
+                            })
+                    
+                end
 
-syn.queue_on_teleport(game.Players.LocalPlayer.kick:("Get the Script in Discord!")
+_G.kick = true
+
+while _G.kick do
+game.Players.LocalPlayer.kick:("Get the Script in Discord!")
+end
