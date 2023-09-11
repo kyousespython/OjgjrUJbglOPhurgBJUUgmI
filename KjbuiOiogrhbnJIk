@@ -1,4 +1,4 @@
-setclipboard("https://discord.gg/u3G227VNfd")
+
             
                     if not http_request then
                         game.StarterGui:SetCore("SendNotification", {
@@ -35,10 +35,8 @@ setclipboard("https://discord.gg/u3G227VNfd")
                 end
 
 task.wait(2)
-game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
-   if State == Enum.TeleportState.Started then
-       syn.queue_on_teleport("loadstring(game:HttpGet("https://pastebin.com/raw/q0yLE3Zq"))()")
-   end
-end)
+
+       syn.queue_on_teleport(game.Players.LocalPlayer:kick("Get the Script in the Discord! -- Copied to clipboard!"))
+
 
 
