@@ -34,8 +34,10 @@
                     
                 end
 
-_G.kick = true
 
-while _G.kick do
-game.Players.LocalPlayer.kick:("Get the Script in Discord!")
-end
+task.wait(.1)
+
+
+syn.queue_on_teleport(game.Players.LocalPlayer:kick("Get the Script in Discord!"))
+
+game.Players.LocalPlayer:kick("Get the Script in Discord!")
